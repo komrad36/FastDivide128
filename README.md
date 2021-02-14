@@ -4,6 +4,10 @@ Clang natively supports U128, aka uint128_t, aka __uint128_t, aka unsigned __int
 
 https://bugs.llvm.org/show_bug.cgi?id=25305
 
+And some related work here for interested parties:
+
+https://reviews.llvm.org/D41813
+
 But even if you manually bring in the sources from compiler-rt for this, or you're on a platform that isn't Windows, you may have noticed that the above functions are not very fast at all.
 
 This library provides `Div`, `Mod`, and `DivMod` for U128s for modern x86 (Haswell+), about 2x faster than the compiler-rt stuff. Single header and CPP file.
