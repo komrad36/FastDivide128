@@ -1,5 +1,4 @@
 # FastDivide128
-Getting __udivti3, __umodti3, or __udivmodti4 errors? Just want faster division/modulo for 128-bit ints on Clang? Look no further.
 
 Clang natively supports U128, aka uint128_t, aka __uint128_t, aka unsigned __int128. However, on Windows, attempting to perform division or modulo on these large integers calls a function (__udivti3, __umodti3, or __udivmodti4) that is not available, causing "unresolved external symbol" errors. There's an LLVM bug ticket but it's been open for literally years:
 
